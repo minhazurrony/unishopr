@@ -21,7 +21,7 @@ export const NavBar = ({ isLoggedIn }: NavbarProps) => {
   const [show, setShow] = useState(false);
   const handleToggle = () => setShow(!show);
   return (
-    <Flex as="nav" bg="rgba(14, 43, 61, 0.1)" color="#0E2B3D">
+    <Flex as="nav" bg="rgba(14, 43, 61, 0.1)">
       <Container>
         <Flex align="center" mr={5}>
           <Image objectFit="cover" src="/assets/logo.svg" alt="Logo" />

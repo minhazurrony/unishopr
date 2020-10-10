@@ -1,5 +1,6 @@
 import { Button } from '@chakra-ui/core';
 import styled from 'styled-components';
+import { ExternalControlledCarousel } from '../../components/Carousel';
 import { NavBar } from '../../components/NavBar';
 
 export const PrimaryButton = styled(Button)`
@@ -12,7 +13,7 @@ export const PrimaryButton = styled(Button)`
 
 const HeroSection = styled.section`
   background: url(/assets/hero.png) no-repeat center;
-  height: 75vh;
+  height: 100vh;
 `;
 
 export const HomePage = (props: any) => {
@@ -20,10 +21,13 @@ export const HomePage = (props: any) => {
     <>
       <HeroSection>
         <NavBar isLoggedIn={false} />
+        <ExternalControlledCarousel />
       </HeroSection>
 
       <p>Content from homepage..</p>
-      <PrimaryButton variantColor="primary">Send Code</PrimaryButton>
+      <PrimaryButton variantColor="primary" variant="solid">
+        Send Code
+      </PrimaryButton>
     </>
   );
 };

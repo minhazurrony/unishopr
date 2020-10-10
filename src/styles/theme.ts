@@ -5,6 +5,9 @@ export const customTheme = {
   ...theme,
   colors: {
     ...theme.colors,
+    fonts: {
+      body: 'Barlow Condensed, sans-serif',
+    },
     primary: {
       900: '#1c0103',
       800: '#3f0d11',

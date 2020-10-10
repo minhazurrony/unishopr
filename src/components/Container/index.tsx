@@ -7,7 +7,7 @@ export const Container = ({ children }) => {
       align="center"
       justify="space-between"
       wrap="wrap"
-      padding="1.2rem"
+      padding="0.5rem 1.2rem"
       m="0 auto"
     >
       {children}
