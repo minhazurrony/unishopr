@@ -1,0 +1,85 @@
+.primary {
+  color: #d1545b;
+}
+
+.secondary {
+  color: #0e2b3d;
+}
+
+.shopper {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.box {
+  border-right: 1px solid rgba(112, 112, 112, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lastBox {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../../../../public/assets/box-bg.png') rgba(14, 43, 61, 1);
+}
+.image {
+  margin-bottom: 20px;
+  width: 50px;
+}
+
+.description {
+  color: rgba(25, 25, 30, 0.5);
+}
+
+.lastDescription {
+  color: white;
+}
+
+.pricePrimary {
+  color: white;
+}
+
+.priceSecondary {
+  color: #f5d35d;
+}
+
+.priceContainer {
+  background: url('../../../../public/assets/pricing-bg.png')
+    rgba(14, 43, 61, 1);
+  height: 400px;
+  background-position: center center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.priceDetailsContainer {
+  text-align: center;
+  box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.9);
+}
+
+.priceTitle {
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+}
+
+.priceSubTitle {
+  font-weight: 700;
+  font-size: 14px;
+  color: #f5d35d;
+}
+
+.priceDescription {
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  margin-top: 20px;
+}
