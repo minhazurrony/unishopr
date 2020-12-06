@@ -7,11 +7,11 @@ import {
   Menu,
   MenuButton,
   MenuItem,
-  MenuList,
+  MenuList
 } from '@chakra-ui/core';
 import { useState } from 'react';
-import { PrimaryButton } from '../../pages/HomePage';
 import { Container } from '../Container';
+import { PrimaryButton } from '../PrimaryButton';
 
 interface NavbarProps {
   isLoggedIn: boolean;
@@ -84,9 +84,8 @@ export const NavBar = ({ isLoggedIn }: NavbarProps) => {
               <Button variant="link" variantColor="textColor.900">
                 Login
               </Button>
-              <PrimaryButton variant="solid" variantColor="primary">
-                Sign Up
-              </PrimaryButton>
+              <PrimaryButton buttonText='Sign Up' />
+              
               <Button variant="link" variantColor="textColor.900">
                 Fly with UniShopr
               </Button>
