@@ -2,8 +2,8 @@ import { ButtonGroup, IconButton } from '@chakra-ui/core';
 import styled from '@emotion/styled';
 import React, { Component } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import { PrimaryButton } from '../../pages/HomePage';
 import { Container } from '../Container';
+import { PrimaryButton } from '../PrimaryButton';
 
 const createCarouselItemImage = (index, options = {}) => (
   <div key={index}>
@@ -76,9 +76,7 @@ export class ExternalControlledCarousel extends Component<
         </Carousel>
 
         <SliderControls>
-          <PrimaryButton variant="solid" variantColor="primary">
-            More Info
-          </PrimaryButton>
+          <PrimaryButton buttonText="More Info" />
           <ButtonGroup spacing={4}>
             <IconButton
               variantColor="primary"
@@ -86,6 +84,7 @@ export class ExternalControlledCarousel extends Component<
               onClick={this.prev}
               aria-label="Previous"
               icon="chevron-left"
+              size="sm"
             />
 
             <IconButton
@@ -94,6 +93,7 @@ export class ExternalControlledCarousel extends Component<
               onClick={this.next}
               aria-label="Next"
               icon="chevron-right"
+              size="sm"
             />
           </ButtonGroup>
         </SliderControls>
