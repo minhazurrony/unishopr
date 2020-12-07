@@ -31,6 +31,7 @@ export const SearchBar = ({ placeholder }: SearchBarProps) => {
         <PrimaryButton
           buttonText="Request"
           fromSearchBar={true}
+          variantColor="yellow"
         ></PrimaryButton>
       </SearchButtonContainer>
     </SearchBarContainer>
