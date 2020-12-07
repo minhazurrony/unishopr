@@ -1,4 +1,5 @@
-import { Box, Flex, Grid, Icon, Image, Text } from '@chakra-ui/core';
+import { Box, Flex, Grid, Icon, IconButton, Image } from '@chakra-ui/core';
+import CalculatorInput from '../../components/CalculatorInput';
 import { ExternalControlledCarousel } from '../../components/Carousel';
 import { Container } from '../../components/Container';
 import { NavBar } from '../../components/NavBar';
@@ -183,13 +184,103 @@ export const HomePage = () => {
                   <h3 className={styles.priceCategory}>Sports & Toys</h3>
                 </div>
               </Flex>
-              <Flex bg="blue.50" align="center" justify="center" flex={1}>
-                <Text textAlign="center" bg="pink.50">
-                  Box 2
-                </Text>
+              <Flex
+                bg="rgba(14, 43, 61, 0.05)"
+                flex={1}
+                align="center"
+                justify="center"
+                height="705px"
+              >
+                <form style={{ width: '75%' }}>
+                  <CalculatorInput
+                    htmlFor="productPrice"
+                    inputType="number"
+                    mainLabel="Product Price"
+                    additionalLabel="store"
+                    placeholder="Enter amount"
+                    inputRightContent="usd"
+                  />
+
+                  <CalculatorInput
+                    htmlFor="productWeight"
+                    inputType="number"
+                    mainLabel="Product Weight"
+                    additionalLabel="single"
+                    placeholder="Enter weight"
+                    inputRightContent="kg"
+                  />
+                  <CalculatorInput
+                    htmlFor="quantity"
+                    inputType="number"
+                    mainLabel="Quantity"
+                    placeholder="0"
+                    inputLeftContent={
+                      <IconButton
+                        variant="link"
+                        variantColor="primary"
+                        aria-label="increase quantity"
+                        fontSize="14px"
+                        icon="minus"
+                      />
+                    }
+                    inputRightContent={
+                      <IconButton
+                        variant="link"
+                        variantColor="primary"
+                        aria-label="decrease quantity"
+                        fontSize="14px"
+                        icon="add"
+                      />
+                    }
+                  />
+
+                  <p className={styles.priceOverview}>
+                    Approximate cost for your product is{' '}
+                    <span className={styles.priceOverViewAmount}>
+                      995.00 TK
+                    </span>{' '}
+                    <span style={{ fontWeight: 500 }}>+ shipping</span> (If any)
+                  </p>
+                </form>
               </Flex>
             </Flex>
           </ContentWrapper>
+
+          <FeatureSection style={{ marginTop: 0 }}>
+            <Tagline style={{ marginBottom: 40, marginTop: 20 }}>
+              Find out the exact cost
+            </Tagline>
+            <SearchContainer>
+              <SearchBar placeholder="Product url for request" />
+            </SearchContainer>
+            <LogoContainer>
+              <Image
+                src="assets/amazon-logo.png"
+                width={60}
+                style={{ margin: '0px 15px' }}
+              />
+              <Image
+                src="assets/ebay-logo.png"
+                width={60}
+                style={{ margin: '0px 15px' }}
+              />
+              <Image
+                src="assets/hp-logo.png"
+                width={25}
+                style={{ margin: '0px 15px' }}
+              />
+              <Image
+                src="assets/walmart-logo.png"
+                width={90}
+                style={{ margin: '0px 15px' }}
+              />
+              <Image
+                src="assets/world-logo.png"
+                width={25}
+                style={{ margin: '0px 15px' }}
+              />
+            </LogoContainer>
+          </FeatureSection>
         </Container>
       </>
     </>

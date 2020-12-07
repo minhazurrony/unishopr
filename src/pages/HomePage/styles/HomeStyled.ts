@@ -36,9 +36,9 @@ export const LogoContainer = styled.div`
 export const Tagline = styled.h2`
   color: white;
   text-align: center;
-  font-size: 20;
   font-weight: 600;
   margin-top: 40px;
+  letter-spacing: 1px;
 `;
 
 export const TitleWithBackground = styled.div`
