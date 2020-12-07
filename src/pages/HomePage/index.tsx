@@ -3,16 +3,14 @@ import { ExternalControlledCarousel } from '../../components/Carousel';
 import { Container } from '../../components/Container';
 import { NavBar } from '../../components/NavBar';
 import { SearchBar } from '../../components/SearchBar';
+import TitleContainer from '../../components/TitleContainer';
 import {
-  BigTitle,
   ContentWrapper,
   FeatureSection,
   HeroSection,
   LogoContainer,
   SearchContainer,
-  SmallTitle,
   Tagline,
-  TitleContainer,
   TitleWithBackground,
 } from './styles/HomeStyled';
 import styles from './styles/homeStyles.module.css';
@@ -63,13 +61,11 @@ export const HomePage = () => {
             </FeatureSection>
 
             {/* how it works container starts here */}
-            <TitleContainer>
-              <SmallTitle>How it all works?</SmallTitle>
-              <BigTitle>
-                <span className={styles.primary}>Things can't get</span>
-                <span className={styles.secondary}> any simpler!</span>
-              </BigTitle>
-            </TitleContainer>
+            <TitleContainer
+              smallTitle="How it all works?"
+              mainTitleLeft="Things can't get"
+              mainTitleRight="any simpler!"
+            />
             <TitleWithBackground>
               <h3 className={styles.shopper}>Shopper</h3>
             </TitleWithBackground>
@@ -101,15 +97,16 @@ export const HomePage = () => {
             </Grid>
 
             {/* price container starts here */}
-            <TitleWithBackground style={{ padding: '20px 0' }}>
-              <SmallTitle style={{ color: 'white' }}>
-                Price breakdown
-              </SmallTitle>
-              <BigTitle>
-                <span className={styles.pricePrimary}>We are not</span>
-                <span className={styles.priceSecondary}> overcharging!</span>
-              </BigTitle>
-            </TitleWithBackground>
+            <TitleContainer
+              smallTitle="Price breakdown"
+              mainTitleLeft="We are not"
+              mainTitleRight="overcharging!"
+              mainTitleLeftColor="white"
+              mainTitleRightColor="#f5d35d"
+              backgroundColor="#d1545b"
+              smallTitleColor="white"
+            />
+
             <div className={styles.priceContainer}>
               <Box
                 bg="rgba(14, 43, 61, 0.9)"

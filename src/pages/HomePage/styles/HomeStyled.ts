@@ -41,24 +41,6 @@ export const Tagline = styled.h2`
   margin-top: 40px;
 `;
 
-export const TitleContainer = styled.div`
-  text-align: center;
-  padding: 50px;
-  line-height: 1.2;
-`;
-
-export const SmallTitle = styled.h3`
-  font-weight: 600;
-  font-size: 14px;
-  color: #494947;
-  opacity: 0.5;
-`;
-
-export const BigTitle = styled.h2`
-  font-weight: 700;
-  font-size: 30px;
-`;
-
 export const TitleWithBackground = styled.div`
   padding: 10px;
   background-color: #d1545b;
