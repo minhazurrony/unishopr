@@ -62,6 +62,7 @@ const SmallTitle = styled.h3`
   font-weight: 600;
   font-size: 14px;
   opacity: 0.5;
+  letter-spacing: 1.5px;
 `;
 
 const BigTitle = styled.h2`

@@ -1,4 +1,4 @@
-import { Box, Grid, Icon, Image } from '@chakra-ui/core';
+import { Box, Flex, Grid, Icon, Image, Text } from '@chakra-ui/core';
 import { ExternalControlledCarousel } from '../../components/Carousel';
 import { Container } from '../../components/Container';
 import { NavBar } from '../../components/NavBar';
@@ -158,6 +158,37 @@ export const HomePage = () => {
                 <h3 className={styles.priceDescription}>Home Delivery</h3>
               </Box>
             </div>
+
+            {/* price calculator container starts here */}
+            <TitleContainer
+              smallTitle="Approximate price calculator"
+              mainTitleLeft="How much"
+              mainTitleRight="can it cost you to get that -"
+            />
+            <Flex align="center">
+              <Flex
+                bg="green.50"
+                align="center"
+                justify="center"
+                flex={1}
+                height="705px"
+                className={styles.priceCategoryContainer}
+              >
+                <div className={styles.priceCategoryListContainer}>
+                  <h3 className={styles.priceCategory}>Electronics</h3>
+                  <h3 className={styles.priceCategoryActive}>Fashion</h3>
+                  <h3 className={styles.priceCategory}>Jewelry</h3>
+                  <h3 className={styles.priceCategory}>Books & Magazines</h3>
+                  <h3 className={styles.priceCategory}>Beauty & Health</h3>
+                  <h3 className={styles.priceCategory}>Sports & Toys</h3>
+                </div>
+              </Flex>
+              <Flex bg="blue.50" align="center" justify="center" flex={1}>
+                <Text textAlign="center" bg="pink.50">
+                  Box 2
+                </Text>
+              </Flex>
+            </Flex>
           </ContentWrapper>
         </Container>
       </>
