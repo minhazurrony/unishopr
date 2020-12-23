@@ -1,4 +1,5 @@
-import { Button } from '@chakra-ui/core';
+import { SmallAddIcon } from '@chakra-ui/icons';
+import { Button } from '@chakra-ui/react';
 import styled from 'styled-components';
 
 interface PrimaryButtonProps {
@@ -22,9 +23,9 @@ export const PrimaryButton = ({
 }: PrimaryButtonProps) => {
   return (
     <CustomButton
-      leftIcon={fromSearchBar ? 'small-add' : null}
+      leftIcon={fromSearchBar ? <SmallAddIcon /> : null}
       variant="solid"
-      variantColor={variantColor ? variantColor : 'primary'}
+      colorScheme={variantColor ? variantColor : 'primary'}
     >
       {buttonText}
     </CustomButton>

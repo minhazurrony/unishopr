@@ -1,4 +1,5 @@
-import { Box, Flex, Grid, Icon, IconButton, Image } from '@chakra-ui/core';
+import { AddIcon, MinusIcon } from '@chakra-ui/icons';
+import { Box, Flex, Grid, Icon, IconButton, Image } from '@chakra-ui/react';
 import CalculatorInput from '../../components/CalculatorInput';
 import { ExternalControlledCarousel } from '../../components/Carousel';
 import { Container } from '../../components/Container';
@@ -35,27 +36,22 @@ export const HomePage = () => {
               <LogoContainer>
                 <Image
                   src="assets/amazon-logo.png"
-                  width={60}
                   style={{ margin: '0px 15px' }}
                 />
                 <Image
                   src="assets/ebay-logo.png"
-                  width={60}
                   style={{ margin: '0px 15px' }}
                 />
                 <Image
                   src="assets/hp-logo.png"
-                  width={25}
                   style={{ margin: '0px 15px' }}
                 />
                 <Image
                   src="assets/walmart-logo.png"
-                  width={90}
                   style={{ margin: '0px 15px' }}
                 />
                 <Image
                   src="assets/world-logo.png"
-                  width={25}
                   style={{ margin: '0px 15px' }}
                 />
               </LogoContainer>
@@ -218,19 +214,19 @@ export const HomePage = () => {
                     inputLeftContent={
                       <IconButton
                         variant="link"
-                        variantColor="primary"
+                        colorScheme="primary"
                         aria-label="increase quantity"
                         fontSize="14px"
-                        icon="minus"
+                        icon={<MinusIcon />}
                       />
                     }
                     inputRightContent={
                       <IconButton
                         variant="link"
-                        variantColor="primary"
+                        colorScheme="primary"
                         aria-label="decrease quantity"
                         fontSize="14px"
-                        icon="add"
+                        icon={<AddIcon />}
                       />
                     }
                   />
@@ -257,27 +253,19 @@ export const HomePage = () => {
             <LogoContainer>
               <Image
                 src="assets/amazon-logo.png"
-                width={60}
                 style={{ margin: '0px 15px' }}
               />
               <Image
                 src="assets/ebay-logo.png"
-                width={60}
                 style={{ margin: '0px 15px' }}
               />
-              <Image
-                src="assets/hp-logo.png"
-                width={25}
-                style={{ margin: '0px 15px' }}
-              />
+              <Image src="assets/hp-logo.png" style={{ margin: '0px 15px' }} />
               <Image
                 src="assets/walmart-logo.png"
-                width={90}
                 style={{ margin: '0px 15px' }}
               />
               <Image
                 src="assets/world-logo.png"
-                width={25}
                 style={{ margin: '0px 15px' }}
               />
             </LogoContainer>

@@ -8,7 +8,7 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { useState } from 'react';
 import { Container } from '../Container';
 import { PrimaryButton } from '../PrimaryButton';
@@ -46,13 +46,13 @@ export const NavBar = ({ isLoggedIn }: NavbarProps) => {
         >
           {isLoggedIn ? (
             <ButtonGroup spacing={6}>
-              <Button variant="link" variantColor="textColor.900">
+              <Button variant="link" colorScheme="textColor.900">
                 Notification
               </Button>
-              <Button variant="link" variantColor="textColor.900">
+              <Button variant="link" colorScheme="textColor.900">
                 Cart
               </Button>
-              <Button variant="link" variantColor="textColor.900">
+              <Button variant="link" colorScheme="textColor.900">
                 Wishlist
               </Button>
 
@@ -61,7 +61,7 @@ export const NavBar = ({ isLoggedIn }: NavbarProps) => {
                   as={Button}
                   //@ts-ignore
                   variant="ghost"
-                  variantColor="textColor.900"
+                  colorScheme="textColor.900"
                   rightIcon="chevron-down"
                   mr="1.5rem"
                 >
@@ -72,23 +72,22 @@ export const NavBar = ({ isLoggedIn }: NavbarProps) => {
                   <MenuItem>Sign Out</MenuItem>
                 </MenuList>
               </Menu>
-              <Button variant="link" variantColor="textColor.900">
+              <Button variant="link" colorScheme="textColor.900">
                 Fly with UniShopr
               </Button>
             </ButtonGroup>
           ) : (
             <ButtonGroup spacing={6}>
-              <Button variant="link" variantColor="textColor.900">
+              <Button variant="link" colorScheme="textColor.900">
                 Have Questions?
               </Button>
-              <Button variant="link" variantColor="textColor.900">
+              <Button variant="link" colorScheme="textColor.900">
                 Login
               </Button>
-              <span style={{ marginRight: '1.8rem' }}>
-                <PrimaryButton buttonText="Sign Up" />
-              </span>
 
-              <Button variant="link" variantColor="textColor.900">
+              <PrimaryButton buttonText="Sign Up" />
+
+              <Button variant="link" colorScheme="textColor.900">
                 Fly with UniShopr
               </Button>
             </ButtonGroup>

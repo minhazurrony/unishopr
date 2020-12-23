@@ -69,7 +69,7 @@
 }
 
 .priceCategoryContainer {
-  background: url('../../../../public/assets/price-category-bg.png');
+  background: url('../../../../public/assets/price-category-bg.png') !important;
 }
 
 .priceCategoryListContainer {

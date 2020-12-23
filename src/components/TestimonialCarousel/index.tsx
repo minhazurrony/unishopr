@@ -1,4 +1,4 @@
-import { Box, Image } from '@chakra-ui/core';
+import { Box, Image } from '@chakra-ui/react';
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
 import { PrimaryButton } from '../../components/PrimaryButton';

@@ -1,4 +1,5 @@
-import { ButtonGroup, IconButton } from '@chakra-ui/core';
+import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
+import { ButtonGroup, IconButton } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import React, { Component } from 'react';
 import { Carousel } from 'react-responsive-carousel';
@@ -79,20 +80,20 @@ export class ExternalControlledCarousel extends Component<
           <PrimaryButton buttonText="More Info" />
           <ButtonGroup spacing={4}>
             <IconButton
-              variantColor="primary"
+              colorScheme="primary"
               variant="outline"
               onClick={this.prev}
               aria-label="Previous"
-              icon="chevron-left"
+              icon={<ChevronLeftIcon />}
               size="sm"
             />
 
             <IconButton
-              variantColor="primary"
+              colorScheme="primary"
               variant="outline"
               onClick={this.next}
               aria-label="Next"
-              icon="chevron-right"
+              icon={<ChevronRightIcon />}
               size="sm"
             />
           </ButtonGroup>

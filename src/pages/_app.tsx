@@ -1,4 +1,4 @@
-import { CSSReset, ThemeProvider } from '@chakra-ui/core';
+import { ChakraProvider } from '@chakra-ui/react';
 import { AppProps } from 'next/app';
 import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -7,10 +7,10 @@ import '../components/Carousel/carousel.css';
 import { customTheme } from '../styles/theme';
 function App({ Component, pageProps }: AppProps): React.ReactNode {
   return (
-    <ThemeProvider theme={customTheme}>
-      <CSSReset />
+    <ChakraProvider theme={customTheme}>
+      {/* <CSSReset /> */}
       <Component {...pageProps} />
-    </ThemeProvider>
+    </ChakraProvider>
   );
 }
 export default App;
