@@ -4,6 +4,7 @@ import { ExternalControlledCarousel } from '../../components/Carousel';
 import { Container } from '../../components/Container';
 import { NavBar } from '../../components/NavBar';
 import { SearchBar } from '../../components/SearchBar';
+import { TestimonialCarousel } from '../../components/TestimonialCarousel';
 import TitleContainer from '../../components/TitleContainer';
 import {
   ContentWrapper,
@@ -282,6 +283,31 @@ export const HomePage = () => {
             </LogoContainer>
           </FeatureSection>
         </Container>
+
+        <section style={{ background: 'green', padding: 50 }}>
+          <TestimonialCarousel
+            data={[
+              {
+                id: 0,
+                imageUrl: 'https://bit.ly/2Z4KKcF',
+                feedbackContent: 'lorem',
+                userName: 'Rony',
+              },
+              {
+                id: 1,
+                imageUrl: 'https://bit.ly/2Z4KKcF',
+                feedbackContent: 'lorem',
+                userName: 'Rony',
+              },
+              {
+                id: 2,
+                imageUrl: 'https://bit.ly/2Z4KKcF',
+                feedbackContent: 'lorem',
+                userName: 'Rony',
+              },
+            ]}
+          />
+        </section>
       </>
     </>
   );
