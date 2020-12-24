@@ -7,6 +7,7 @@ import { NavBar } from '../../components/NavBar';
 import { SearchBar } from '../../components/SearchBar';
 import { TestimonialCarousel } from '../../components/TestimonialCarousel';
 import TitleContainer from '../../components/TitleContainer';
+import { COLORS } from '../../styles/colors';
 import {
   ContentWrapper,
   FeatureSection,
@@ -99,10 +100,10 @@ export const HomePage = () => {
               smallTitle="Price breakdown"
               mainTitleLeft="We are not"
               mainTitleRight="overcharging!"
-              mainTitleLeftColor="white"
-              mainTitleRightColor="#f5d35d"
-              backgroundColor="#d1545b"
-              smallTitleColor="white"
+              mainTitleLeftColor={COLORS.white}
+              mainTitleRightColor={COLORS.tertiary}
+              backgroundColor={COLORS.primary}
+              smallTitleColor={COLORS.white}
             />
 
             <div className={styles.priceContainer}>
@@ -110,7 +111,7 @@ export const HomePage = () => {
                 bg="rgba(14, 43, 61, 0.9)"
                 w={250}
                 p={10}
-                color="white"
+                color={COLORS.white}
                 className={styles.priceDetailsContainer}
               >
                 <h2 className={styles.priceTitle}>XXX USD</h2>
@@ -119,36 +120,36 @@ export const HomePage = () => {
                   Price of the product
                 </h3>
               </Box>
-              <AddIcon color="#D1545B" h={6} w={6} />
+              <AddIcon color={COLORS.primary} h={6} w={6} />
               <Box
                 bg="rgba(14, 43, 61, 0.9)"
                 w={250}
                 p={10}
-                color="white"
+                color={COLORS.white}
                 className={styles.priceDetailsContainer}
               >
                 <h2 className={styles.priceTitle}>250 TK</h2>
                 <p className={styles.priceSubTitle}>PER KG</p>
                 <h3 className={styles.priceDescription}>Shipping Costs</h3>
               </Box>
-              <AddIcon color="#D1545B" h={6} w={6} />
+              <AddIcon color={COLORS.primary} h={6} w={6} />
               <Box
                 bg="rgba(14, 43, 61, 0.9)"
                 w={250}
                 p={10}
-                color="white"
+                color={COLORS.white}
                 className={styles.priceDetailsContainer}
               >
                 <h2 className={styles.priceTitle}>5 TK</h2>
                 <p className={styles.priceSubTitle}>PER USD</p>
                 <h3 className={styles.priceDescription}>Traveler's Charge</h3>
               </Box>
-              <AddIcon color="#D1545B" h={6} w={6} />
+              <AddIcon color={COLORS.primary} h={6} w={6} />
               <Box
                 bg="rgba(14, 43, 61, 0.9)"
                 w={250}
                 p={10}
-                color="white"
+                color={COLORS.white}
                 className={styles.priceDetailsContainer}
               >
                 <h2 className={styles.priceTitle}>100 TK</h2>
@@ -272,7 +273,17 @@ export const HomePage = () => {
           </FeatureSection>
         </Container>
 
-        <section style={{ background: 'green', padding: 50 }}>
+        <section
+          style={{ background: COLORS.secondary, padding: 50, marginTop: 100 }}
+        >
+          <TitleContainer
+            smallTitle="What makes us different?"
+            smallTitleColor={COLORS.secondaryTitle}
+            mainTitleLeft="Let's hear"
+            mainTitleRight="their story first!"
+            mainTitleLeftColor={COLORS.white}
+            mainTitleRightColor={COLORS.tertiary}
+          />
           <TestimonialCarousel
             showButton={true}
             allowPadding={true}

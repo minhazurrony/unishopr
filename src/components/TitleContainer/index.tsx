@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { COLORS } from '../../styles/colors';
 
 interface TitleContainerProps {
   smallTitle: string;
@@ -22,24 +23,28 @@ const TitleContainer = ({
 }: TitleContainerProps) => {
   return (
     <Container
-      style={{ backgroundColor: backgroundColor ? backgroundColor : 'white' }}
+      style={{
+        backgroundColor: backgroundColor ? backgroundColor : 'transparent',
+      }}
     >
       <SmallTitle
-        style={{ color: smallTitleColor ? smallTitleColor : ' #494947' }}
+        style={{
+          color: smallTitleColor ? smallTitleColor : COLORS.secondaryTitle,
+        }}
       >
         {smallTitle}
       </SmallTitle>
       <BigTitle>
         <span
           style={{
-            color: mainTitleLeftColor ? mainTitleLeftColor : '#d1545b',
+            color: mainTitleLeftColor ? mainTitleLeftColor : COLORS.primary,
           }}
         >
           {mainTitleLeft}
         </span>
         <span
           style={{
-            color: mainTitleRightColor ? mainTitleRightColor : '#0e2b3d',
+            color: mainTitleRightColor ? mainTitleRightColor : COLORS.secondary,
           }}
         >
           {' '}

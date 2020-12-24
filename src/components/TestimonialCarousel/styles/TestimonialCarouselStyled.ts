@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { COLORS } from '../../../styles/colors';
 
 export const Container = styled.div`
   padding: 0 15px;
@@ -20,5 +21,5 @@ export const UserName = styled.p`
   margin-top: 20px;
   font-weight: 600;
   font-size: 18px;
-  color: #0e2b3d;
+  color: ${COLORS.secondary};
 `;

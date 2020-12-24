@@ -5,6 +5,7 @@ import React from 'react';
 import Carousel, { consts } from 'react-elastic-carousel';
 import { BiUser } from 'react-icons/bi';
 import { PrimaryButton } from '../../components/PrimaryButton';
+import { COLORS } from '../../styles/colors';
 import styles from './styles/testimonialCarousel.module.css';
 import {
   Container,
@@ -100,7 +101,7 @@ export const TestimonialCarousel = ({
           <PrimaryButton
             buttonText="Sign Up Now"
             showIcon={true}
-            icon={<Icon as={BiUser} color="white" />}
+            icon={<Icon as={BiUser} color={COLORS.white} />}
           />
         </div>
       )}

@@ -1,12 +1,13 @@
 import { AddIcon, SearchIcon } from '@chakra-ui/icons';
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import styled from 'styled-components';
+import { COLORS } from '../../../src/styles/colors';
 import { PrimaryButton } from '../PrimaryButton';
 
 const SearchInput = styled(Input)`
   border-radius: 20px !important;
   padding-left: 35px;
-  background-color: white;
+  background-color: ${COLORS.white};
 `;
 
 const SearchBarContainer = styled.div`
@@ -27,7 +28,7 @@ export const SearchBar = ({ placeholder }: SearchBarProps) => {
     <SearchBarContainer>
       <InputGroup style={{ flex: 1 }}>
         <InputLeftElement
-          children={<SearchIcon style={{ color: '#ce4a52' }} />}
+          children={<SearchIcon style={{ color: COLORS.primary }} />}
         />
         <SearchInput placeholder={placeholder} />
       </InputGroup>
