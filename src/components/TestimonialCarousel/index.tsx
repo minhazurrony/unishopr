@@ -1,8 +1,15 @@
-import { Box, Image } from '@chakra-ui/react';
+import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
+import { Button, Flex, Image, Square } from '@chakra-ui/react';
 import React from 'react';
-import Carousel from 'react-elastic-carousel';
+//@ts-ignore
+import Carousel, { consts } from 'react-elastic-carousel';
 import { PrimaryButton } from '../../components/PrimaryButton';
 import styles from './styles/testimonialCarousel.module.css';
+import {
+  Container,
+  FeedbackDescription,
+  UserName,
+} from './styles/TestimonialCarouselStyled';
 
 interface TestimonialCarouselProps {
   data: Array<{
@@ -11,72 +18,87 @@ interface TestimonialCarouselProps {
     feedbackContent: string;
     userName: string;
   }>;
+
+  showButton?: boolean;
+  allowPadding: boolean;
 }
 
-export const TestimonialCarousel = ({ data }: TestimonialCarouselProps) => {
-  const property = {
-    imageUrl: 'https://bit.ly/2Z4KKcF',
-    imageAlt: 'Rear view of modern home with pool',
-    beds: 3,
-    baths: 2,
-    title: 'Modern home in city center in the heart of historic Los Angeles',
-    formattedPrice: '$1,900.00',
-    reviewCount: 34,
-    rating: 4,
+export const TestimonialCarousel = ({
+  data,
+  showButton,
+  allowPadding,
+}: TestimonialCarouselProps) => {
+  const customArrow = ({ type, onClick, isEdge }) => {
+    const pointer =
+      type === consts.PREV ? (
+        <ChevronLeftIcon w={6} h={6} />
+      ) : (
+        <ChevronRightIcon w={6} h={6} />
+      );
+    return (
+      <Button
+        onClick={onClick}
+        disabled={isEdge}
+        className={styles.customArrowButton}
+        variant="outline"
+        colorScheme="primary"
+      >
+        {pointer}
+      </Button>
+    );
   };
 
+  const customPagination = ({ pages, activePage, onClick }) => {
+    return (
+      <Flex direction="row">
+        {pages.map((page) => {
+          const isActivePage: Boolean = activePage === page;
+          return (
+            <Square
+              key={page}
+              //@ts-ignore
+              onClick={() => onClick(page)}
+              active={isActivePage.toString()}
+              className={
+                pages[activePage] === page
+                  ? styles.carouselControlActive
+                  : styles.carouselControl
+              }
+              style={showButton ? { marginTop: 100 } : { marginTop: 20 }}
+            />
+          );
+        })}
+      </Flex>
+    );
+  };
   return (
     <div className={styles.sliderContainer}>
-      <Carousel itemsToShow={3} itemPadding={[10, 10]}>
+      <Carousel
+        itemsToShow={3}
+        itemPadding={allowPadding ? [10, 10] : [0, 0]}
+        focusOnSelect={false}
+        className="testimonial-carousel"
+        renderArrow={customArrow}
+        renderPagination={customPagination}
+      >
         {data.map((item: any) => {
           return (
-            <Box
-              maxW="sm"
-              borderWidth="1px"
-              borderRadius="lg"
-              overflow="hidden"
-              key={item.id}
-            >
+            <Container key={item.id}>
               <Image src={item.imageUrl} alt="User image" />
 
-              <Box p="6">
-                <Box d="flex" alignItems="baseline">
-                  <Box
-                    color="gray.500"
-                    fontWeight="semibold"
-                    letterSpacing="wide"
-                    fontSize="xs"
-                    textTransform="uppercase"
-                    ml="2"
-                  >
-                    {property.beds} beds &bull; {property.baths} baths
-                  </Box>
-                </Box>
+              <FeedbackDescription>{item.feedbackContent}</FeedbackDescription>
 
-                <Box
-                  mt="1"
-                  fontWeight="semibold"
-                  as="h4"
-                  lineHeight="tight"
-                  isTruncated
-                >
-                  {item.feedback}
-                </Box>
-
-                <Box>
-                  {property.formattedPrice}
-                  <Box as="span" color="gray.600" fontSize="sm">
-                    / wk
-                  </Box>
-                </Box>
-              </Box>
-            </Box>
+              <UserName>- {item.userName}</UserName>
+            </Container>
           );
         })}
       </Carousel>
-      <div className={styles.sliderButton}>
-        <PrimaryButton buttonText="Sign Up" />
-      </div>
+
+      {showButton && (
+        <div className={styles.sliderButton}>
+          <PrimaryButton buttonText="Sign Up" />
+        </div>
+      )}
     </div>
   );
 };

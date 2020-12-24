@@ -274,24 +274,36 @@ export const HomePage = () => {
 
         <section style={{ background: 'green', padding: 50 }}>
           <TestimonialCarousel
+            showButton={true}
+            allowPadding={true}
             data={[
               {
                 id: 0,
-                imageUrl: 'https://bit.ly/2Z4KKcF',
-                feedbackContent: 'lorem',
-                userName: 'Rony',
+                imageUrl: 'assets/user.png',
+                feedbackContent:
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
+                userName: 'Jenny Doe',
               },
               {
                 id: 1,
-                imageUrl: 'https://bit.ly/2Z4KKcF',
-                feedbackContent: 'lorem',
-                userName: 'Rony',
+                imageUrl: 'assets/user.png',
+                feedbackContent:
+                  'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+                userName: 'Jenny Doe',
               },
               {
                 id: 2,
-                imageUrl: 'https://bit.ly/2Z4KKcF',
-                feedbackContent: 'lorem',
-                userName: 'Rony',
+                imageUrl: 'assets/user.png',
+                feedbackContent:
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+                userName: 'Jenny Doe',
+              },
+              {
+                id: 3,
+                imageUrl: 'assets/user.png',
+                feedbackContent:
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting",
+                userName: 'Jenny Doe',
               },
             ]}
           />
