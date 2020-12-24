@@ -1,4 +1,4 @@
-import { SearchIcon } from '@chakra-ui/icons';
+import { AddIcon, SearchIcon } from '@chakra-ui/icons';
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import styled from 'styled-components';
 import { PrimaryButton } from '../PrimaryButton';
@@ -34,8 +34,9 @@ export const SearchBar = ({ placeholder }: SearchBarProps) => {
       <SearchButtonContainer>
         <PrimaryButton
           buttonText="Request"
-          fromSearchBar={true}
           variantColor="yellow"
+          showIcon={true}
+          icon={<AddIcon h={3} w={3} />}
         ></PrimaryButton>
       </SearchButtonContainer>
     </SearchBarContainer>

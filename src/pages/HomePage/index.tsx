@@ -1,5 +1,5 @@
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
-import { Box, Flex, Grid, Icon, IconButton, Image } from '@chakra-ui/react';
+import { Box, Flex, Grid, IconButton, Image } from '@chakra-ui/react';
 import CalculatorInput from '../../components/CalculatorInput';
 import { ExternalControlledCarousel } from '../../components/Carousel';
 import { Container } from '../../components/Container';
@@ -119,7 +119,7 @@ export const HomePage = () => {
                   Price of the product
                 </h3>
               </Box>
-              <Icon name="add" color="primary.500" size="24px" />
+              <AddIcon color="#D1545B" h={6} w={6} />
               <Box
                 bg="rgba(14, 43, 61, 0.9)"
                 w={250}
@@ -131,7 +131,7 @@ export const HomePage = () => {
                 <p className={styles.priceSubTitle}>PER KG</p>
                 <h3 className={styles.priceDescription}>Shipping Costs</h3>
               </Box>
-              <Icon name="add" color="primary.500" size="24px" />
+              <AddIcon color="#D1545B" h={6} w={6} />
               <Box
                 bg="rgba(14, 43, 61, 0.9)"
                 w={250}
@@ -143,7 +143,7 @@ export const HomePage = () => {
                 <p className={styles.priceSubTitle}>PER USD</p>
                 <h3 className={styles.priceDescription}>Traveler's Charge</h3>
               </Box>
-              <Icon name="add" color="primary.500" size="24px" />
+              <AddIcon color="#D1545B" h={6} w={6} />
               <Box
                 bg="rgba(14, 43, 61, 0.9)"
                 w={250}
