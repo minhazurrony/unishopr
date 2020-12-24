@@ -1,10 +1,11 @@
-import { SmallAddIcon } from '@chakra-ui/icons';
 import { Button } from '@chakra-ui/react';
+import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 interface PrimaryButtonProps {
   buttonText: string;
-  fromSearchBar?: boolean;
+  showIcon?: boolean;
+  icon?: ReactNode;
   variantColor?: string;
 }
 
@@ -18,12 +19,13 @@ const CustomButton = styled(Button)`
 
 export const PrimaryButton = ({
   buttonText,
-  fromSearchBar,
+  showIcon,
+  icon,
   variantColor,
 }: PrimaryButtonProps) => {
   return (
     <CustomButton
-      leftIcon={fromSearchBar ? <SmallAddIcon /> : null}
+      leftIcon={showIcon ? icon : null}
       variant="solid"
       colorScheme={variantColor ? variantColor : 'primary'}
     >

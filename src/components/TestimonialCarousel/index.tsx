@@ -1,8 +1,9 @@
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
-import { Button, Flex, Image, Square } from '@chakra-ui/react';
+import { Button, Flex, Icon, Image, Square } from '@chakra-ui/react';
 import React from 'react';
 //@ts-ignore
 import Carousel, { consts } from 'react-elastic-carousel';
+import { BiUser } from 'react-icons/bi';
 import { PrimaryButton } from '../../components/PrimaryButton';
 import styles from './styles/testimonialCarousel.module.css';
 import {
@@ -96,7 +97,11 @@ export const TestimonialCarousel = ({
 
       {showButton && (
         <div className={styles.sliderButton}>
-          <PrimaryButton buttonText="Sign Up" />
+          <PrimaryButton
+            buttonText="Sign Up Now"
+            showIcon={true}
+            icon={<Icon as={BiUser} color="white" />}
+          />
         </div>
       )}
     </div>
