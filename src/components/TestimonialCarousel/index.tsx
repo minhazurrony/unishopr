@@ -20,16 +20,9 @@ interface TestimonialCarouselProps {
     feedbackContent: string;
     userName: string;
   }>;
-
-  showButton?: boolean;
-  allowPadding: boolean;
 }
 
-export const TestimonialCarousel = ({
-  data,
-  showButton,
-  allowPadding,
-}: TestimonialCarouselProps) => {
+export const TestimonialCarousel = ({ data }: TestimonialCarouselProps) => {
   const customArrow = ({ type, onClick, isEdge }) => {
     const pointer =
       type === consts.PREV ? (
@@ -66,7 +59,6 @@ export const TestimonialCarousel = ({
                   ? styles.carouselControlActive
                   : styles.carouselControl
               }
-              style={showButton ? { marginTop: 100 } : { marginTop: 20 }}
             />
           );
         })}
@@ -77,7 +69,7 @@ export const TestimonialCarousel = ({
     <div className={styles.sliderContainer}>
       <Carousel
         itemsToShow={3}
-        itemPadding={allowPadding ? [10, 10] : [0, 0]}
+        itemPadding={[10, 10]}
         focusOnSelect={false}
         className="testimonial-carousel"
         renderArrow={customArrow}
@@ -96,15 +88,13 @@ export const TestimonialCarousel = ({
         })}
       </Carousel>
 
-      {showButton && (
-        <div className={styles.sliderButton}>
-          <PrimaryButton
-            buttonText="Sign Up Now"
-            showIcon={true}
-            icon={<Icon as={BiUser} color={COLORS.white} />}
-          />
-        </div>
-      )}
+      <div className={styles.sliderButton}>
+        <PrimaryButton
+          buttonText="Sign Up Now"
+          showIcon={true}
+          icon={<Icon as={BiUser} color={COLORS.white} />}
+        />
+      </div>
     </div>
   );
 };

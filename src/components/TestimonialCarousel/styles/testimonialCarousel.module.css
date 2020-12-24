@@ -24,6 +24,7 @@
   height: 10px;
   width: 10px;
   background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 100px;
 }
 
 .carouselControlActive {
@@ -32,6 +33,7 @@
   height: 10px;
   width: 10px;
   background-color: #d1545b;
+  margin-top: 100px;
 }
 
 .carouselControl:hover,

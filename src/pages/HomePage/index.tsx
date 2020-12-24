@@ -285,8 +285,6 @@ export const HomePage = () => {
             mainTitleRightColor={COLORS.tertiary}
           />
           <TestimonialCarousel
-            showButton={true}
-            allowPadding={true}
             data={[
               {
                 id: 0,
