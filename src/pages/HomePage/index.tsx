@@ -3,13 +3,13 @@ import { Box, Flex, Grid, IconButton, Image } from '@chakra-ui/react';
 import CalculatorInput from '../../components/CalculatorInput';
 import { ExternalControlledCarousel } from '../../components/Carousel';
 import { Container } from '../../components/Container';
+import { ContentWrapper } from '../../components/ContentWrapper';
 import { NavBar } from '../../components/NavBar';
 import { SearchBar } from '../../components/SearchBar';
 import { TestimonialCarousel } from '../../components/TestimonialCarousel';
 import TitleContainer from '../../components/TitleContainer';
 import { COLORS } from '../../styles/colors';
 import {
-  ContentWrapper,
   FeatureSection,
   HeroSection,
   LogoContainer,
@@ -161,6 +161,7 @@ export const HomePage = () => {
             {/* price calculator container starts here */}
             <TitleContainer
               smallTitle="Approximate price calculator"
+              smallTitleColor={COLORS.secondaryTitleDark}
               mainTitleLeft="How much"
               mainTitleRight="can it cost you to get that -"
             />
@@ -273,12 +274,13 @@ export const HomePage = () => {
           </FeatureSection>
         </Container>
 
+        {/* testimonial section starts from here */}
         <section
           style={{ background: COLORS.secondary, padding: 50, marginTop: 100 }}
         >
           <TitleContainer
             smallTitle="What makes us different?"
-            smallTitleColor={COLORS.secondaryTitle}
+            smallTitleColor={COLORS.white}
             mainTitleLeft="Let's hear"
             mainTitleRight="their story first!"
             mainTitleLeftColor={COLORS.white}
@@ -316,6 +318,23 @@ export const HomePage = () => {
               },
             ]}
           />
+        </section>
+
+        {/* what people are buying section starts from here */}
+        <section style={{ marginTop: 100 }}>
+          <Container>
+            <ContentWrapper>
+              <TitleContainer
+                smallTitle="Aren't you courious?"
+                smallTitleColor={COLORS.white}
+                mainTitleLeft="What peope"
+                mainTitleRight="are buying?"
+                mainTitleLeftColor={COLORS.tertiary}
+                mainTitleRightColor={COLORS.white}
+                backgroundColor={COLORS.primary}
+              />
+            </ContentWrapper>
+          </Container>
         </section>
       </>
     </>

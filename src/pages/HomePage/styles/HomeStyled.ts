@@ -5,11 +5,6 @@ export const HeroSection = styled.section`
   height: 100vh;
 `;
 
-export const ContentWrapper = styled.div`
-  width: 100%;
-  box-shadow: 0px 1px 31px 0px rgba(0, 0, 0, 0.12);
-`;
-
 export const FeatureSection = styled.section`
   padding: 40px 20px;
   background: #1a3445;

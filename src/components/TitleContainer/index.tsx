@@ -29,7 +29,7 @@ const TitleContainer = ({
     >
       <SmallTitle
         style={{
-          color: smallTitleColor ? smallTitleColor : COLORS.secondaryTitle,
+          color: smallTitleColor ? smallTitleColor : COLORS.secondaryTitleDark,
         }}
       >
         {smallTitle}
@@ -68,6 +68,7 @@ const SmallTitle = styled.h3`
   font-size: 14px;
   opacity: 0.5;
   letter-spacing: 1.5px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 `;
 
 const BigTitle = styled.h2`
