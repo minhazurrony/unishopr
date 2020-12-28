@@ -62,3 +62,39 @@ export const CollectionTitle = styled.h4`
   font-size: 20px;
   margin-bottom: 20px;
 `;
+
+export const StoreContainer = styled.div`
+  width: 70%;
+  margin: auto;
+  padding-bottom: 40px;
+`;
+
+export const ReferContainer = styled.div`
+  padding: 20px;
+  text-align: center;
+`;
+
+export const ReferDescription = styled.h4`
+  font-weight: 600;
+  font-size: 18px;
+  color: ${COLORS.primary};
+  padding: 20px 0;
+  margin-bottom: 30px;
+`;
+
+export const ReferProcessContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
+export const ReferProcessText = styled.p`
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 400;
+`;
+
+export const ReferFormContainer = styled.div`
+  width: 35%;
+  margin: 50px auto;
+`;

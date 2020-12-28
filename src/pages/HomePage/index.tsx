@@ -6,13 +6,16 @@ import {
   Grid,
   IconButton,
   Image,
+  Input,
   SimpleGrid,
 } from '@chakra-ui/react';
+import { BiShareAlt } from 'react-icons/bi';
 import CalculatorInput from '../../components/CalculatorInput';
 import { ExternalControlledCarousel } from '../../components/Carousel';
 import { Container } from '../../components/Container';
 import { ContentWrapper } from '../../components/ContentWrapper';
 import { NavBar } from '../../components/NavBar';
+import { PrimaryButton } from '../../components/PrimaryButton';
 import { ProductCarousel } from '../../components/ProductCarousel';
 import { SearchBar } from '../../components/SearchBar';
 import { TestimonialCarousel } from '../../components/TestimonialCarousel';
@@ -26,7 +29,13 @@ import {
   FeatureSection,
   HeroSection,
   LogoContainer,
+  ReferContainer,
+  ReferDescription,
+  ReferFormContainer,
+  ReferProcessContainer,
+  ReferProcessText,
   SearchContainer,
+  StoreContainer,
   Tagline,
   TitleWithBackground,
 } from './styles/HomeStyled';
@@ -539,6 +548,112 @@ export const HomePage = () => {
               </CollectionCard>
             </SimpleGrid>
           </div>
+        </section>
+
+        {/* favorite stores section starts here */}
+        <section style={{ marginTop: 100 }}>
+          <Container>
+            <ContentWrapper>
+              <TitleContainer
+                smallTitle="Want to order from your favorite Stores?"
+                smallTitleColor={COLORS.secondaryTitleDark}
+                mainTitleLeft="Go to any website, find your product"
+                mainTitleRight="and paste the link into UniShopr!"
+                mainTitleLeftColor={COLORS.primary}
+                mainTitleRightColor={COLORS.secondary}
+                backgroundColor={COLORS.white}
+              />
+
+              <StoreContainer>
+                <Image src="assets/shop-logo.png" alt="favorite shop logos" />
+              </StoreContainer>
+            </ContentWrapper>
+          </Container>
+        </section>
+
+        {/* refer section starts here */}
+
+        <section style={{ marginTop: 100 }}>
+          <Container>
+            <ContentWrapper>
+              <TitleContainer
+                smallTitle="Refer and Earn"
+                smallTitleColor={COLORS.white}
+                mainTitleLeft="Refer to your friend"
+                mainTitleRight="and get ৳200 discount each"
+                mainTitleLeftColor={COLORS.white}
+                mainTitleRightColor={COLORS.tertiary}
+                backgroundColor={COLORS.secondary}
+              />
+              <ReferContainer>
+                <Image
+                  src="assets/refer.png"
+                  alt="refer image"
+                  style={{ margin: 'auto', width: '80px' }}
+                />
+                <ReferDescription>
+                  Share you referral link and invite your friends via SMS /
+                  E-mail / Facebook. <br /> You can earn upto BDT 200
+                </ReferDescription>
+
+                <ReferProcessContainer>
+                  <div>
+                    <Image
+                      src="assets/invite.png"
+                      alt="invitation image"
+                      style={{ margin: 'auto' }}
+                    />
+                    <ReferProcessText>
+                      Invite your friends <br />
+                      to sign up
+                    </ReferProcessText>
+                  </div>
+                  <div>
+                    <Image
+                      src="assets/shopping.png"
+                      alt="shopping image"
+                      style={{ margin: 'auto' }}
+                    />
+                    <ReferProcessText>
+                      Your friend purchase a <br />
+                      product from us
+                    </ReferProcessText>
+                  </div>
+                  <div>
+                    <Image
+                      src="assets/gift-box.png"
+                      alt="gift box image"
+                      style={{ margin: 'auto' }}
+                    />
+                    <ReferProcessText>
+                      Both you and your friends <br />
+                      get rewarded
+                    </ReferProcessText>
+                  </div>
+                </ReferProcessContainer>
+
+                <ReferFormContainer>
+                  <Button
+                    colorScheme="primary"
+                    variant="link"
+                    style={{ marginBottom: 15 }}
+                  >
+                    Copy Link
+                  </Button>
+                  <Input
+                    variant="filled"
+                    placeholder="Filled"
+                    style={{ marginBottom: 25 }}
+                  />
+                  <PrimaryButton
+                    buttonText="Refer Your Friends"
+                    showIcon={true}
+                    icon={<BiShareAlt />}
+                  />
+                </ReferFormContainer>
+              </ReferContainer>
+            </ContentWrapper>
+          </Container>
         </section>
       </>
     </>
