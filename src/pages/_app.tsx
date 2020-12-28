@@ -8,7 +8,6 @@ import { customTheme } from '../styles/theme';
 function App({ Component, pageProps }: AppProps): React.ReactNode {
   return (
     <ChakraProvider theme={customTheme}>
-      {/* <CSSReset /> */}
       <Component {...pageProps} />
     </ChakraProvider>
   );

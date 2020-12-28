@@ -1,4 +1,6 @@
+import { Box } from '@chakra-ui/react';
 import styled from 'styled-components';
+import { COLORS } from '../../../styles/colors';
 
 export const HeroSection = styled.section`
   background: url(/assets/hero.png) no-repeat center;
@@ -29,7 +31,7 @@ export const LogoContainer = styled.div`
 `;
 
 export const Tagline = styled.h2`
-  color: white;
+  color: ${COLORS.white};
   text-align: center;
   font-weight: 600;
   margin-top: 40px;
@@ -38,6 +40,25 @@ export const Tagline = styled.h2`
 
 export const TitleWithBackground = styled.div`
   padding: 10px;
-  background-color: #d1545b;
+  background-color: ${COLORS.primary};
   text-align: center;
+`;
+
+export const CollectionCard = styled(Box)`
+  background: ${COLORS.white};
+  display: flex;
+  padding: 2rem;
+`;
+
+export const CollectionContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+`;
+
+export const CollectionTitle = styled.h4`
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 20px;
 `;

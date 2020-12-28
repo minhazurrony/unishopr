@@ -1,5 +1,13 @@
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
-import { Box, Flex, Grid, IconButton, Image } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  IconButton,
+  Image,
+  SimpleGrid,
+} from '@chakra-ui/react';
 import CalculatorInput from '../../components/CalculatorInput';
 import { ExternalControlledCarousel } from '../../components/Carousel';
 import { Container } from '../../components/Container';
@@ -12,6 +20,9 @@ import TitleContainer from '../../components/TitleContainer';
 import { TravellerSteps } from '../../components/TravellerSteps';
 import { COLORS } from '../../styles/colors';
 import {
+  CollectionCard,
+  CollectionContentContainer,
+  CollectionTitle,
   FeatureSection,
   HeroSection,
   LogoContainer,
@@ -336,7 +347,7 @@ export const HomePage = () => {
                 backgroundColor={COLORS.primary}
               />
 
-              <div style={{ padding: 20 }}>
+              <div style={{ padding: 20, background: `${COLORS.white}` }}>
                 <ProductCarousel
                   data={[
                     {
@@ -424,6 +435,110 @@ export const HomePage = () => {
               />
             </ContentWrapper>
           </Container>
+        </section>
+
+        {/* products collection overview section starts here */}
+        <section style={{ marginTop: 100, padding: '0.5rem 1.2rem' }}>
+          <div style={{ width: '85%', margin: 'auto' }}>
+            <SimpleGrid columns={2} spacingX="40px" spacingY="20px">
+              <CollectionCard>
+                <CollectionContentContainer>
+                  <div style={{ width: '60%' }}>
+                    <CollectionTitle>
+                      JBL T460BT Extra Bass Wireless Headphone
+                    </CollectionTitle>
+                    <p style={{ fontSize: 18 }}>
+                      Sale upto{' '}
+                      <span style={{ color: `${COLORS.primary}` }}>
+                        30% off
+                      </span>{' '}
+                      on all products in the New Collection
+                    </p>
+                  </div>
+                  <Button colorScheme="primary" variant="link">
+                    View Collection
+                  </Button>
+                </CollectionContentContainer>
+                <Image
+                  src="assets/jbl-headphone.png"
+                  alt="jbl headphone"
+                  width="35%"
+                />
+              </CollectionCard>
+              <CollectionCard>
+                <CollectionContentContainer>
+                  <div style={{ width: '60%' }}>
+                    <CollectionTitle>
+                      JBL T460BT Extra Bass Wireless Headphone
+                    </CollectionTitle>
+                    <p style={{ fontSize: 18 }}>
+                      Sale upto{' '}
+                      <span style={{ color: `${COLORS.primary}` }}>
+                        30% off
+                      </span>{' '}
+                      on all products in the New Collection
+                    </p>
+                  </div>
+                  <Button colorScheme="primary" variant="link">
+                    View Collection
+                  </Button>
+                </CollectionContentContainer>
+                <Image
+                  src="assets/jbl-headphone.png"
+                  alt="jbl headphone"
+                  width="35%"
+                />
+              </CollectionCard>
+              <CollectionCard>
+                <CollectionContentContainer>
+                  <div style={{ width: '60%' }}>
+                    <CollectionTitle>
+                      JBL T460BT Extra Bass Wireless Headphone
+                    </CollectionTitle>
+                    <p style={{ fontSize: 18 }}>
+                      Sale upto{' '}
+                      <span style={{ color: `${COLORS.primary}` }}>
+                        30% off
+                      </span>{' '}
+                      on all products in the New Collection
+                    </p>
+                  </div>
+                  <Button colorScheme="primary" variant="link">
+                    View Collection
+                  </Button>
+                </CollectionContentContainer>
+                <Image
+                  src="assets/jbl-headphone.png"
+                  alt="jbl headphone"
+                  width="35%"
+                />
+              </CollectionCard>
+              <CollectionCard>
+                <CollectionContentContainer>
+                  <div style={{ width: '60%' }}>
+                    <CollectionTitle>
+                      JBL T460BT Extra Bass Wireless Headphone
+                    </CollectionTitle>
+                    <p style={{ fontSize: 18 }}>
+                      Sale upto{' '}
+                      <span style={{ color: `${COLORS.primary}` }}>
+                        30% off
+                      </span>{' '}
+                      on all products in the New Collection
+                    </p>
+                  </div>
+                  <Button colorScheme="primary" variant="link">
+                    View Collection
+                  </Button>
+                </CollectionContentContainer>
+                <Image
+                  src="assets/jbl-headphone.png"
+                  alt="jbl headphone"
+                  width="35%"
+                />
+              </CollectionCard>
+            </SimpleGrid>
+          </div>
         </section>
       </>
     </>

@@ -14,7 +14,12 @@ export default function Home() {
         ></link>
       </Head>
 
-      <main style={{ fontFamily: 'Barlow Condensed' }}>
+      <main
+        style={{
+          fontFamily: 'Barlow Condensed',
+          background: 'rgba(14, 43, 61, 0.05)',
+        }}
+      >
         <HomePage />
       </main>
       <footer>
