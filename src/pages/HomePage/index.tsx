@@ -5,6 +5,7 @@ import { ExternalControlledCarousel } from '../../components/Carousel';
 import { Container } from '../../components/Container';
 import { ContentWrapper } from '../../components/ContentWrapper';
 import { NavBar } from '../../components/NavBar';
+import { ProductCarousel } from '../../components/ProductCarousel';
 import { SearchBar } from '../../components/SearchBar';
 import { TestimonialCarousel } from '../../components/TestimonialCarousel';
 import TitleContainer from '../../components/TitleContainer';
@@ -333,6 +334,43 @@ export const HomePage = () => {
                 mainTitleRightColor={COLORS.white}
                 backgroundColor={COLORS.primary}
               />
+
+              <div style={{ padding: 20 }}>
+                <ProductCarousel
+                  data={[
+                    {
+                      id: 0,
+                      title: 'JBL T460BT Extra Bass Wireless ...',
+                      imageUrl: 'assets/jbl-headphone.png',
+                      price: '16025',
+                    },
+                    {
+                      id: 1,
+                      title: 'Apple Watch Series 3 (GPS + Cellular ...',
+                      imageUrl: 'assets/apple-watch.png',
+                      price: '16025',
+                    },
+                    {
+                      id: 2,
+                      title: 'JBL T460BT Extra Bass Wireless ...',
+                      imageUrl: 'assets/jbl-headphone.png',
+                      price: '16025',
+                    },
+                    {
+                      id: 3,
+                      title: 'Apple Watch Series 3 (GPS + Cellular ...',
+                      imageUrl: 'assets/apple-watch.png',
+                      price: '16025',
+                    },
+                    {
+                      id: 4,
+                      title: 'Apple Watch Series 3 (GPS + Cellular ...',
+                      imageUrl: 'assets/apple-watch.png',
+                      price: '16025',
+                    },
+                  ]}
+                />
+              </div>
             </ContentWrapper>
           </Container>
         </section>
