@@ -9,6 +9,7 @@ import { ProductCarousel } from '../../components/ProductCarousel';
 import { SearchBar } from '../../components/SearchBar';
 import { TestimonialCarousel } from '../../components/TestimonialCarousel';
 import TitleContainer from '../../components/TitleContainer';
+import { TravellerSteps } from '../../components/TravellerSteps';
 import { COLORS } from '../../styles/colors';
 import {
   FeatureSection,
@@ -371,6 +372,56 @@ export const HomePage = () => {
                   ]}
                 />
               </div>
+            </ContentWrapper>
+          </Container>
+        </section>
+
+        {/* want to make money with unishopr? starts from here */}
+
+        <section style={{ marginTop: 100 }}>
+          <Container>
+            <ContentWrapper>
+              <TitleContainer
+                smallTitle="Want to make money with Unishopr"
+                smallTitleColor={COLORS.white}
+                mainTitleLeft="Follow these"
+                mainTitleRight="simple steps!"
+                mainTitleLeftColor={COLORS.white}
+                mainTitleRightColor={COLORS.tertiary}
+                backgroundColor={COLORS.primary}
+              />
+              <TravellerSteps
+                data={[
+                  {
+                    step: '1',
+                    imageUrl: 'assets/signup-image.png',
+                    title: 'Sign up',
+                    description: 'Open account and register with us.',
+                  },
+
+                  {
+                    step: '2',
+                    imageUrl: 'assets/airplane.png',
+                    title: 'Travel',
+                    description:
+                      'Inform us when you are travelling to India, Thailand or Malaysia.',
+                  },
+
+                  {
+                    step: '3',
+                    imageUrl: 'assets/bag.png',
+                    title: 'Bring items',
+                    description: 'Bring items using your unused baggage space.',
+                  },
+
+                  {
+                    step: '4',
+                    imageUrl: 'assets/wallet.png',
+                    title: 'Get paid',
+                    description: 'Get paid on thenumber of items you bring.',
+                  },
+                ]}
+              />
             </ContentWrapper>
           </Container>
         </section>
