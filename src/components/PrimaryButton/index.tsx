@@ -15,6 +15,9 @@ const CustomButton = styled(Button)`
   padding-right: 30px;
   -webkit-box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.31);
   box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.31);
+  :focus {
+    box-shadow: none !important;
+  }
 `;
 
 export const PrimaryButton = ({
