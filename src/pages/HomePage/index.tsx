@@ -14,6 +14,7 @@ import CalculatorInput from '../../components/CalculatorInput';
 import { ExternalControlledCarousel } from '../../components/Carousel';
 import { Container } from '../../components/Container';
 import { ContentWrapper } from '../../components/ContentWrapper';
+import { FAQ } from '../../components/FAQ';
 import { NavBar } from '../../components/NavBar';
 import { PrimaryButton } from '../../components/PrimaryButton';
 import { ProductCarousel } from '../../components/ProductCarousel';
@@ -652,6 +653,39 @@ export const HomePage = () => {
                   />
                 </ReferFormContainer>
               </ReferContainer>
+            </ContentWrapper>
+          </Container>
+        </section>
+
+        {/* FAQ section starts here */}
+        <section style={{ marginTop: 100 }}>
+          <Container>
+            <ContentWrapper>
+              <TitleContainer
+                smallTitle="FAQ"
+                smallTitleColor={COLORS.white}
+                mainTitleLeft="Have"
+                mainTitleRight="questions?"
+                mainTitleLeftColor={COLORS.tertiary}
+                mainTitleRightColor={COLORS.white}
+                backgroundColor={COLORS.primary}
+              />
+              <FAQ
+                data={[
+                  {
+                    id: '1',
+                    question: 'What is Unishopr?',
+                    answer:
+                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+                  },
+                  {
+                    id: '2',
+                    question: 'What is Unishopr?',
+                    answer:
+                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+                  },
+                ]}
+              />
             </ContentWrapper>
           </Container>
         </section>
