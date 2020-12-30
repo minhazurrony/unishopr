@@ -1,5 +1,6 @@
-import { AddIcon, SearchIcon } from '@chakra-ui/icons';
+import { SearchIcon } from '@chakra-ui/icons';
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
+import { IoAddCircleOutline } from 'react-icons/io5';
 import styled from 'styled-components';
 import { COLORS } from '../../../src/styles/colors';
 import { PrimaryButton } from '../PrimaryButton';
@@ -8,6 +9,11 @@ const SearchInput = styled(Input)`
   border-radius: 20px !important;
   padding-left: 35px;
   background-color: ${COLORS.white};
+  border: none;
+  :focus {
+    border-color: ${COLORS.primary};
+    box-shadow: 0 0 0 1px ${COLORS.primary};
+  }
 `;
 
 const SearchBarContainer = styled.div`
@@ -37,7 +43,7 @@ export const SearchBar = ({ placeholder }: SearchBarProps) => {
           buttonText="Request"
           variantColor="yellow"
           showIcon={true}
-          icon={<AddIcon h={3} w={3} />}
+          icon={<IoAddCircleOutline />}
         ></PrimaryButton>
       </SearchButtonContainer>
     </SearchBarContainer>

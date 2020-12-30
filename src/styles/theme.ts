@@ -3,11 +3,19 @@ import { theme } from '@chakra-ui/react';
 // Let's say you want to add custom colors
 export const customTheme = {
   ...theme,
+  styles: {
+    global: {
+      'body': {
+        fontFamily: 'Barlow Condensed',
+        background: 'rgba(14, 43, 61, 0.05)',
+      },
+      'p': {
+        color: '#494947',
+      },
+    },
+  },
   colors: {
     ...theme.colors,
-    fonts: {
-      body: 'Barlow Condensed, sans-serif',
-    },
     primary: {
       900: '#1c0103',
       800: '#3f0d11',
@@ -29,18 +37,6 @@ export const customTheme = {
       300: '#f5d157',
       200: '#f8de86',
       100: '#fcebb3',
-    },
-
-    textColor: {
-      900: '#001019',
-      800: '#0e2c3e',
-      700: '#1e4966',
-      600: '#2b668e',
-      500: '#3983b6',
-      400: '#509ccf',
-      300: '#74b2da',
-      200: '#9ac9e5',
-      100: '#c1def1',
     },
   },
 };

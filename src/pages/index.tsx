@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import { Footer } from '../components/Footer';
 import { HomePage } from './HomePage';
 
 export default function Home() {
@@ -14,17 +15,10 @@ export default function Home() {
         ></link>
       </Head>
 
-      <main
-        style={{
-          fontFamily: 'Barlow Condensed',
-          background: 'rgba(14, 43, 61, 0.05)',
-        }}
-      >
+      <main>
         <HomePage />
       </main>
-      <footer>
-        <p>footer content goes here</p>
-      </footer>
+      <Footer />
     </>
   );
 }

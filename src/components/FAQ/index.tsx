@@ -19,7 +19,10 @@ export const FAQ = ({ data }: FAQProps) => {
       {data &&
         data.map((item: { id: string; question: string; answer: string }) => {
           return (
-            <AccordionItem key={item.id}>
+            <AccordionItem
+              key={item.id}
+              style={{ borderColor: COLORS.borderColor }}
+            >
               <AccordionButton>
                 <Box flex="1" textAlign="center">
                   <Question>{item.question}</Question>
