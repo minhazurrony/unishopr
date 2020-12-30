@@ -1,3 +1,4 @@
+import { ChevronDownIcon } from '@chakra-ui/icons';
 import {
   Box,
   Button,
@@ -12,6 +13,7 @@ import {
 import { useState } from 'react';
 import { Container } from '../Container';
 import { PrimaryButton } from '../PrimaryButton';
+import { SearchBar } from '../SearchBar';
 
 interface NavbarProps {
   isLoggedIn: boolean;
@@ -27,13 +29,15 @@ export const NavBar = ({ isLoggedIn }: NavbarProps) => {
           <Image objectFit="cover" src="/assets/logo.svg" alt="Logo" />
         </Flex>
 
+        <Box style={{ flex: 1 }} mr={'2.5rem'}>
+          <SearchBar
+            placeholder="Paste product link from any US shop"
+            isFromNavbar={true}
+          />
+        </Box>
+
         <Box display={{ base: 'block', md: 'none' }} onClick={handleToggle}>
-          <svg
-            fill="white"
-            width="12px"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg fill="white" width="12px" viewBox="0 0 20 20">
             <title>Menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
@@ -59,11 +63,9 @@ export const NavBar = ({ isLoggedIn }: NavbarProps) => {
               <Menu>
                 <MenuButton
                   as={Button}
-                  //@ts-ignore
                   variant="ghost"
                   colorScheme="textColor.900"
-                  rightIcon="chevron-down"
-                  mr="1.5rem"
+                  rightIcon={<ChevronDownIcon />}
                 >
                   Account
                 </MenuButton>

@@ -27,9 +27,10 @@ const SearchButtonContainer = styled.div`
 
 interface SearchBarProps {
   placeholder: string;
+  isFromNavbar?: boolean;
 }
 
-export const SearchBar = ({ placeholder }: SearchBarProps) => {
+export const SearchBar = ({ placeholder, isFromNavbar }: SearchBarProps) => {
   return (
     <SearchBarContainer>
       <InputGroup style={{ flex: 1 }}>
@@ -38,11 +39,14 @@ export const SearchBar = ({ placeholder }: SearchBarProps) => {
         />
         <SearchInput placeholder={placeholder} />
       </InputGroup>
-      <SearchButtonContainer>
+      <SearchButtonContainer
+        style={{ marginLeft: isFromNavbar ? '-45px' : '-75px' }}
+      >
         <PrimaryButton
           buttonText="Request"
           variantColor="yellow"
           showIcon={true}
+          hideLabel={isFromNavbar ? true : false}
           icon={<IoAddCircleOutline />}
         ></PrimaryButton>
       </SearchButtonContainer>

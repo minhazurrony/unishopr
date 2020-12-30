@@ -46,7 +46,7 @@ export const HomePage = () => {
   return (
     <>
       <HeroSection>
-        <NavBar isLoggedIn={false} />
+        <NavBar isLoggedIn={true} />
         <ExternalControlledCarousel />
       </HeroSection>
 
