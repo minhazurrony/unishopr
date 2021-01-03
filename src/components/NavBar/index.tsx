@@ -70,6 +70,7 @@ export const NavBar = ({ isLoggedIn }: NavbarProps) => {
                   Account
                 </MenuButton>
                 <MenuList>
+                  <MenuItem>My Orders</MenuItem>
                   <MenuItem>Settings</MenuItem>
                   <MenuItem>Sign Out</MenuItem>
                 </MenuList>
